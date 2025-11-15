@@ -1,0 +1,8 @@
+- name: Setup Linux Host
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Install updates
+      apt:
+        update_cache: yes
+        upgrade: dist
